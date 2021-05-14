@@ -28,8 +28,10 @@ public:
         if (real_score > 1000000) return -1;
 
         double hitwindow300 = 34 + 3 * (fmin(10, fmax(0, 10 - od)));
-
+	
+	
         double strain = pow((5 * fmax(1, difficulty / 0.2) - 4), 2.2) / 135 * (1 + 0.1 * fmin(1, note_count / 1500));
+	    //did u meant to do PowResult/(135*(other stuff))?
 
         if (real_score <= 500000)
             strain = 0;
